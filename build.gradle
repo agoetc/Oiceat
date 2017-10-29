@@ -1,0 +1,25 @@
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    kotlin_version = '1.1.4'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+
+dependencies {
+    compile (
+            "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version",
+            'org.twitter4j:twitter4j-core:4.0.4',
+            "com.atilika.kuromoji:kuromoji-ipadic:0.9.0",
+
+    )
+    compile files('lib/kuromoji-0.7.7.jar')
+}
